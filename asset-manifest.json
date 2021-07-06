@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ven-muse/static/css/main.a617e044.chunk.css",
+    "main.js": "/ven-muse/static/js/main.e9857766.chunk.js",
+    "main.js.map": "/ven-muse/static/js/main.e9857766.chunk.js.map",
+    "runtime-main.js": "/ven-muse/static/js/runtime-main.eb7e47bd.js",
+    "runtime-main.js.map": "/ven-muse/static/js/runtime-main.eb7e47bd.js.map",
+    "static/js/2.7a30a2b3.chunk.js": "/ven-muse/static/js/2.7a30a2b3.chunk.js",
+    "static/js/2.7a30a2b3.chunk.js.map": "/ven-muse/static/js/2.7a30a2b3.chunk.js.map",
+    "static/js/3.c3292c0f.chunk.js": "/ven-muse/static/js/3.c3292c0f.chunk.js",
+    "static/js/3.c3292c0f.chunk.js.map": "/ven-muse/static/js/3.c3292c0f.chunk.js.map",
+    "index.html": "/ven-muse/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/ven-muse/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.7a30a2b3.chunk.js.LICENSE.txt": "/ven-muse/static/js/2.7a30a2b3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eb7e47bd.js",
+    "static/js/2.7a30a2b3.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.e9857766.chunk.js"
+  ]
+}
