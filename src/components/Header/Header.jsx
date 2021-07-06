@@ -65,7 +65,7 @@ export default function Header() {
             <AppBar className={classes.appbar} elevation={0}>
                 <Toolbar className={classes.appbarWrapper}>
                     <h1 className={classes.appbarTitle}>Ven-Muse</h1>
-                    <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+                    <IconButton>
                         <MusicNoteIcon className={classes.icon} />
                     </IconButton>
                 </Toolbar>
