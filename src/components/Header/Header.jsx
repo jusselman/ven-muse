@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, IconButton, Toolbar } from '@material-ui/core';
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import QueueMusicIcon from '@material-ui/icons/QueueMusic';
+import Sidebar from '../Sidebar/Sidebar';
 import Grow from '@material-ui/core/Grow';
 import Slide from '@material-ui/core/Slide';
 import { Link } from 'react-scroll';
@@ -29,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
     icon: {
         color: '#FFFFFF',
         fontSize: '2rem',
+        position: 'absolute',
     },
     container: {
         textAlign: 'center',
@@ -46,6 +48,9 @@ const useStyles = makeStyles((theme) => ({
         color: '#FFFFFF',
         fontSize: '2rem',
     },
+    paper: {
+        background: "blue"
+    },
 }));
 export default function Header() {
     const classes = useStyles();
@@ -60,13 +65,14 @@ export default function Header() {
             in={checked}
             style={{ transformOrigin: '0 0 0' }}
             {...(checked ? { timeout: 2500 } : {})}
-            collapsedHeight={100}
+            collapsedheight={100}
         >
             <AppBar className={classes.appbar} elevation={0}>
                 <Toolbar className={classes.appbarWrapper}>
                     <h1 className={classes.appbarTitle}>Ven-Muse</h1>
                     <IconButton>
                         <MusicNoteIcon className={classes.icon} />
+                        <Sidebar />
                     </IconButton>
                 </Toolbar>
             </AppBar>
@@ -75,7 +81,7 @@ export default function Header() {
             in={checked}
             style={{ transformOrigin: '0 0 0' }}
             {...(checked ? { timeout: 1000 } : {})}
-            collapsedHeight={5}
+            collapsedheight={5}
         >
             <div className={classes.container}>
                 <h1 className={classes.landingTitle}>

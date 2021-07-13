@@ -48,10 +48,26 @@ const useStyles = makeStyles((theme) => ({
         background: '#000000',
         // boxShadow: 'inset 1px 1px 10px #333',
     },
+    purchase: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    buyBtn: {
+        border: '1px solid #ffbe8a',
+        borderRadius: '5px',
+        color: '#ffbe8a',
+        fontFamily: 'Tourney',
+        fontWeight: 'bold',
+        padding: '5px',
+        position: 'absolute',
+        right: '5%',
+    },
     playIcon: {
         // height: 38,
         // width: 38,
     },
+
 }));
 
 export default function Player() {
@@ -84,9 +100,14 @@ export default function Player() {
                     <IconButton className={classes.controlBtn} aria-label="next">
                         {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
                     </IconButton>
+
+                </div>
+                <div className={classes.purchase} >
+                    <IconButton className={classes.buyBtn} aria-label="Buy">
+                        Buy
+                    </IconButton>
                 </div>
             </div>
-
         </Card>
     );
 }

@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
   },
+  typography: {
+    fontFamily: 'Tourney',
+  },
 }));
 export default function App() {
   const classes = useStyles();
