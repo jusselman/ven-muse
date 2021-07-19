@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -46,7 +47,6 @@ const useStyles = makeStyles((theme) => ({
         color: '#ffbe8a',
         padding: 0,
         background: '#000000',
-        // boxShadow: 'inset 1px 1px 10px #333',
     },
     purchase: {
         display: 'flex',
@@ -64,15 +64,18 @@ const useStyles = makeStyles((theme) => ({
         right: '5%',
     },
     playIcon: {
-        // height: 38,
-        // width: 38,
     },
-
 }));
 
 export default function Player() {
     const classes = useStyles();
     const theme = useTheme();
+
+    let audio = new Audio(process.env.PUBLIC_URL + '/assets/audio/teethForWheels.wav');
+
+    const start = () => {
+        audio.play()
+    }
 
     return (
         <Card className={classes.root}>
@@ -94,7 +97,7 @@ export default function Player() {
                     <IconButton className={classes.controlBtn} aria-label="previous">
                         {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
                     </IconButton>
-                    <IconButton className={classes.controlBtn} aria-label="play/pause">
+                    <IconButton className={classes.controlBtn} onClick={start} aria-label="play/pause">
                         <PlayArrowIcon className={classes.playIcon} />
                     </IconButton>
                     <IconButton className={classes.controlBtn} aria-label="next">
@@ -103,9 +106,9 @@ export default function Player() {
 
                 </div>
                 <div className={classes.purchase} >
-                    <IconButton className={classes.buyBtn} aria-label="Buy">
+                    <Link to='/Buy' className={classes.buyBtn} aria-label="Buy">
                         Buy
-                    </IconButton>
+                    </Link>
                 </div>
             </div>
         </Card>
